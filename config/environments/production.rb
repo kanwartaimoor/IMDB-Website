@@ -28,11 +28,7 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
-
-
-
-
-
+#MYCODE
 config.action_mailer.delivery_method = :sendmail
 # Defaults to:
 # config.action_mailer.sendmail_settings = {
@@ -53,10 +49,6 @@ config.action_mailer.smtp_settings = {
   enable_starttls_auto: true }
 
 config.active_storage.service = :amazon
-
-
-
-
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
