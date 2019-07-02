@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_124055) do
+ActiveRecord::Schema.define(version: 2019_07_02_075534) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 2019_07_01_124055) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "actors", force: :cascade do |t|
+    t.string "name"
+    t.string "date_of_birth"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "actors_movies", id: false, force: :cascade do |t|
+    t.integer "movie_id", null: false
+    t.integer "actor_id", null: false
+  end
+
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
@@ -52,6 +64,9 @@ ActiveRecord::Schema.define(version: 2019_07_01_124055) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "trailer"
+    t.string "director"
+    t.string "writer"
+    t.string "run_time"
   end
 
   create_table "users", force: :cascade do |t|

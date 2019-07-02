@@ -60,11 +60,6 @@
     <%= form.file_field :images, multiple: true %> 
   </div>
 
-  <div class="field">
-   <%= form.label :actors %>
-   <%= form.collection_select :actors, @actors, :id, :name, {} %>
-  </div>
-
   <div class="actions">
     <%= form.submit :class => 'btn btn-primary' %>
   </div>

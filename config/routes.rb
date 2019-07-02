@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :actors
   mount Ckeditor::Engine => '/ckeditor'
   resources :movies
   devise_for :users
