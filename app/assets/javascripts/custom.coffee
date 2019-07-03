@@ -1,5 +1,5 @@
+#To be fixed in later commits
 toggleVideo = (state) ->
-  # if state == 'hide', hide. Else: show video
   div = document.getElementById('youvideo')
   iframe = div.getElementsByTagName('iframe')[0].contentWindow
   div.style.display = if state == 'hide' then 'none' else ''
