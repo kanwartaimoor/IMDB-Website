@@ -1,0 +1,71 @@
+<%= form_with(model: movie, local: true) do |form| %>
+  <% if movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+        <% movie.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.cktext_area :description, ckeditor: { language: 'uk'} %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :genre %>
+    <%= form.select :genre, ['Comedy', 'Action', 'Horror', 'Thriller', 'Romantic']%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :release_date %>
+    <%= form.text_field :release_date %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :trailer %>
+    <%= form.text_field :trailer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rating %>
+    <%= form.text_field :rating %>
+  </div>
+
+  <div class="field">
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+  </div>
+
+  <div class="field">
+    <%= form.label :writer %>
+    <%= form.text_field :writer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :run_time %>
+    <%= form.text_field :run_time %>
+  </div>
+
+  <div class="field"> 
+    <%= form.file_field :images, multiple: true %> 
+  </div>
+
+  <div class="field">
+   <%= form.label :actors %>
+   <%= form.collection_select :actors, @actors, :id, :name, {} %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit :class => 'btn btn-primary' %>
+  </div>
+<% end %>
