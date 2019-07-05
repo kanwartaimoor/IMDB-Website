@@ -61,6 +61,13 @@ class ActorsController < ApplicationController
     end
   end
 
+  def detach
+    @movie = Movie.find(params[:movie_id])
+    @actor = Actor.find(params[:actor_id])
+    @movie.actors.delete(@actor)
+    redirect_to movie_path(@movie)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_actor

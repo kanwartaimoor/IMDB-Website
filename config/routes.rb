@@ -7,5 +7,13 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/secret', to: 'pages#secret', as: :secret
   get '/home', to: 'pages#home', as: :home
-
+  post 'movies/:movie_id/:actor_id/addActor', to: 'movies#addActor'
+  devise_scope :user do
+    get '/users/sign_out', to: 'devise/sessions#destroy'
+  end
+  resources :movies do
+    resources :actors do 
+     get 'detach'
+    end
+  end
 end

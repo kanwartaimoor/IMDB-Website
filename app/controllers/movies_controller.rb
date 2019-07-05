@@ -15,7 +15,6 @@ class MoviesController < ApplicationController
   # GET /movies/new
   def new
     @movie = Movie.new
-
   end
 
   # GET /movies/1/edit
@@ -61,6 +60,17 @@ class MoviesController < ApplicationController
       format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def addActor
+    Movie.find(params[:movie_id]).actors << Actor.find(params[:actor_id])
+  end
+
+  def detach
+    @movie = Movie.find(params[:id])
+    @actor = Actor.find(params[:user_id])
+    @movie.actors.delete(@actor)
+    redirect_to movie_path(group)
   end
 
   private

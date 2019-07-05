@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Movies</h1>
+<!-- <h1>Movies</h1>
 
 <table>
   <thead>
@@ -36,6 +36,14 @@
   </tbody>
 </table>
 
-<br>
+<br> -->
+<div class="row">
 
+  <% @movies.each do |movie| %>
+   <div>
+    <%= render partial: 'index', locals: { movie: movie } %>
+   </div>
+  <% end %>
+
+</div>
 <%= link_to 'New Movie', new_movie_path %>

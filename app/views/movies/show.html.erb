@@ -1,62 +1,91 @@
-<div class="moviecard">
-  <div class="movie-poster play-trailer" style="background: url('<%= url_for @movie.images.first %>');background-size: contain;">
-  </div>
-  <div id="movie-content">
-    <div class="movie-ratings">
-      <span class="star">★</span>
-      <span class="score"> <%= @movie.rating %>  </span>
-      <span class="score-out-of">/ 10 (IMDB)</span>
-    </div>
-    
-    <div class="movie-title"><%= @movie.title %>
-      <span class="movie-year"> <%= @movie.release_date %>  </span>
-    </div>
-   
-    <div class="movie-details">
-      <span class="movie-rating">R</span>
-      <span class="movie-duration"><%= @movie.run_time %></span>
-      <span class="movie-genre"> <%= @movie.genre %> </span>
-    </div>
+<div id="showpages">
+  <div class="moviecard">
+    <div class="movie-poster play-trailer" >
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" >
+            <% @movie.images.each_with_index do |image,index| %>
+              <% if index==0 %>  
+                <div class="carousel-item active">  
+              <% else %>
+                <div class="carousel-item">
+              <% end %>    
+                  <img src="<%= url_for image.variant(resize: "360x600") %>" alt="" class="img-fluid" >
+                </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
 
-    <div class="movie-castcrew">
-      <span class="title">Director</span>
-      <span class="name"> <%= @movie.director %> </span>
-    </div>
-   
-    <div class="movie-castcrew">
-      <span class="title">Writer</span>
-      <span class="name"> <%= @movie.writer %> </span>
-    </div>
+    <div id="movie-content">
+      <div class="movie-ratings">
+        <span class="star">★</span>
+        <span class="score"> <%= @movie.rating %>  </span>
+        <span class="score-out-of">/ 10 (IMDB)</span>
+      </div>
+      
+      <div class="movie-title"><%= @movie.title %>
+        <span class="movie-year"> <%= @movie.release_date %>  </span>
+      </div>
+     
+      <div class="movie-details">
+        <span class="movie-rating">R</span>
+        <span class="movie-duration"><%= @movie.run_time %></span>
+        <span class="movie-genre"> <%= @movie.genre %> </span>
+      </div>
 
-    <div class="movie-castcrew">
-      <span class="title">Actors</span>
-    </div>
+      <div class="movie-castcrew">
+        <span class="title">Director</span>
+        <span class="name"> <%= @movie.director %> </span>
+      </div>
+     
+      <div class="movie-castcrew">
+        <span class="title">Writer</span>
+        <span class="name"> <%= @movie.writer %> </span>
+      </div>
 
-    <div class="row">
-      <div class="movie-castcrew col-6">
+      <div class="movie-castcrew">
+        <span class="title">Actors</span>
+      </div>
+
+      <div class="row">
         <% @movie.actors.each do |actor| %>
           <div class="profile-header-container col-sm-3">   
             <div class="profile-header-img">
-              <%= image_tag user_avatar(actor, 50), class: "img-circle" %>
+              <%= image_tag user_avatar(actor, 50), class: "rounded-circle" %>
               <div class="rank-label-container">
                 <span class="label label-default rank-label"> <%= actor.name %> </span>
+                <%= link_to("Remove", movie_actor_detach_path(@movie, actor_id: actor.id), remote: true, :data => { :confirm => "Are you sure?" }) %>
               </div>
             </div>
           </div>
         <% end %>
+        <div class="profile-header-container col-sm-3">   
+          <a id="btnadd">
+            <div class="profile-header-img">
+                <%= image_tag url_for("plus.png"), size: "50x50" , class: "img-circle" %>
+                <div class="rank-label-container">
+                  <span class="label label-default rank-label"> Add Actor </span>
+                </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="movie-synopsis"> 
+        <%=raw @movie.description %> 
+      </div>
+
+      <button class="movie-trailer-btn play-trailer" type="button">play trailer</button>
+      <div class="add_actor" style="display: none">
+          <%= collection_select(:actors, :actor_id, Actor.where.not(id: @movie.actors.ids), :id, :name ) %>
+          <button class="btn btn-primary btn-sm" type="button" id="actorsubmit" remote="True">Add</button>
       </div>
     </div>
     
-    <div class="movie-synopsis"> 
-      <%=raw @movie.description %> 
-    </div>
-
-    <button class="movie-trailer-btn play-trailer" type="button">play trailer</button>
-  </div>
-  
-  <div class="movie-trailer"><a class="back-btn">back</a>
-    <div id="youvideo">
-      <iframe width="490" height="275" src="<%= @movie.trailer %>" frameborder="0" allowfullscreen></iframe>
+    <div class="movie-trailer"><a class="back-btn">back</a>
+      <div id="youvideo">
+        <iframe width="490" height="275" src="<%= @movie.trailer %>" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </div>
