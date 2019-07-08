@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    
   </head>
 
   <body >
@@ -53,8 +54,8 @@
             </li>
           </ul>
           <% else %>
-            <li><%= link_to 'Log In', new_user_session_path %></li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+            <li><%= link_to 'Log In', new_user_session_path, class: "nav-item nav-link", style: "color: white;" %></li>
+            <li><%= link_to 'Sign Up', new_user_registration_path, class: "nav-item nav-link", style: "color: white;"  %></li>
           <% end %>
         </div>
       </div>

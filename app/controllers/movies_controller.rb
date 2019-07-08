@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /movies
   # GET /movies.json
@@ -71,6 +72,18 @@ class MoviesController < ApplicationController
     @actor = Actor.find(params[:user_id])
     @movie.actors.delete(@actor)
     redirect_to movie_path(group)
+  end
+
+  def delete_image
+    respond_to do |format|
+      puts 'I"M HERE'
+      @movie=Movie.find(params[:id])
+      @image=@movie.images.find(params[:image_id])
+      @image.purge
+
+    
+      format.js { render :delete_image }
+    end
   end
 
   private

@@ -30,5 +30,16 @@ $(document).ready ->
       success: (result) ->
         window.location.reload()
         return
+
+  results = url.split('/');
+  result = results[results.length-2];
+  $('.imgremove').click ->
+    $.ajax
+      type: 'GET'
+      url: '/movies/'+ result + '/deleteImage/' + $(this).text()
+      headers: 'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').content
+      success: (result) ->
+        window.location.reload()
+        return
   
 

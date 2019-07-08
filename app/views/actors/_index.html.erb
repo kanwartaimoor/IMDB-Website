@@ -1,0 +1,15 @@
+<div class="example-2 card">
+  <div class="wrapper" style=" background: url(<%= url_for actor.avatar %>) center/cover no-repeat;">
+    <div class="header">
+      <div class="date">
+        <span class="year"> <%=actor.date_of_birth %> </span>
+      </div>
+    </div>
+    <div class="data">
+      <div class="content">
+        <h1 class="title"><%=actor.name %></h1>
+        <a href="/actors/<%= actor.id %>" class=" btn btn-primary btn-lg">More</a>
+      </div>
+    </div>
+  </div>
+</div>
