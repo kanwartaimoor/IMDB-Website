@@ -43,7 +43,9 @@
             <% if user_signed_in? %>
               <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <%= image_tag user_avatar(current_user,35), class: "rounded-circle" %>
+                <% if current_user.avatar.attached? %>
+                  <%= image_tag user_avatar(current_user,35), class: "rounded-circle" %>
+                <% end %>
                 <span class="caret"></span>
               </a>
         

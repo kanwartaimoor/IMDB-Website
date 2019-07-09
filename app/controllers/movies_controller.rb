@@ -1,11 +1,11 @@
 class MoviesController < ApplicationController
-  before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_movie, only: [:show, :edit, :update, :destroy, :delete_image, :addActor]
   before_action :authenticate_user!
 
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @movies = Movie.order(:title).page params[:page]
   end
 
   # GET /movies/1
@@ -64,28 +64,17 @@ class MoviesController < ApplicationController
   end
 
   def addActor
-    Movie.find(params[:movie_id]).actors << Actor.find(params[:actor_id])
-  end
-
-  def detach
-    @movie = Movie.find(params[:id])
-    @actor = Actor.find(params[:user_id])
-    @movie.actors.delete(@actor)
-    redirect_to movie_path(group)
+    @movie.actors << Actor.find(params[:actor_id])
   end
 
   def delete_image
     respond_to do |format|
-      puts 'I"M HERE'
-      @movie=Movie.find(params[:id])
       @image=@movie.images.find(params[:image_id])
       @image.purge
-
-    
       format.js { render :delete_image }
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_movie

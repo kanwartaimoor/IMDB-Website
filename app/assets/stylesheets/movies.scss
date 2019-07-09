@@ -1,17 +1,6 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  background-color: #dce1e5;
-  font-family: "Montserrat", helvetica, arial, sans-serif;
-  font-size: 14px;
-  color: #cfd6e1;
-  line-height: 1.5;
-  font-weight: 400;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 * {
   -webkit-transition: .4s;
   transition: .4s;
@@ -31,7 +20,7 @@ a {
   margin: 8vh auto;
   border-radius: 8px;
   -webkit-box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);
 }
 
 #movie-card-list .color-overlay {
@@ -58,11 +47,13 @@ a {
   float: right;
   padding-right: 1em;
 }
+
 #movie-card-list .movie-content .movie-title {
   color: #ffffff;
   margin-bottom: .20em;
   opacity: .75;
 }
+
 #movie-card-list .movie-content .movie-info {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -106,7 +97,7 @@ a {
   border-color: #2a9fff;
   color: #2a9fff;
   -webkit-box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
-          box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
+  box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);
 }
 
 @media (max-width: 1000px) {
@@ -127,10 +118,43 @@ a {
     background-size: cover;
     height: 450px;
   }
+  
 
   #movie-card-list .color-overlay {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(42, 159, 255, 0.2)), color-stop(60%, #212120), to(#212120));
     background: linear-gradient(to bottom, rgba(42, 159, 255, 0.2) 0%, #212120 60%, #212120 100%);
   }
+}
+
+
+.pagination{
+  margin-left: 40%;
+}
+
+.pagination * {
+  position: relative;
+  display: block;
+  padding: .5rem .75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.comment-wrapper .panel-body {
+  max-height:650px;
+  overflow:auto;
+}
+
+.comment-wrapper .media-list .media img {
+  width:64px;
+  height:64px;
+  border:2px solid #e5e7e8;
+}
+
+.comment-wrapper .media-list .media {
+  border-bottom:1px dashed #efefef;
+  margin-bottom:25px;
 }
 

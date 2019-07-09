@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-
-  <% @movies.each do |movie| %>
-   <div>
-    <%= render partial: 'index', locals: { movie: movie } %>
-   </div>
-  <% end %>
-
+	<% @movies.each do |movie| %>
+	<div class="col-12 col-sm-12 col-md-12 col-lg-12">
+		<%= render partial: 'index', locals: { movie: movie } %>
+	</div>
+	<% end %>
 </div>
+
+<%= paginate @movies, page_links: false %>
 <%= link_to 'New Movie', new_movie_path %>

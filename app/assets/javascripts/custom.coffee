@@ -31,15 +31,21 @@ $(document).ready ->
         window.location.reload()
         return
 
-  results = url.split('/');
-  result = results[results.length-2];
-  $('.imgremove').click ->
-    $.ajax
-      type: 'GET'
-      url: '/movies/'+ result + '/deleteImage/' + $(this).text()
-      headers: 'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').content
-      success: (result) ->
-        window.location.reload()
-        return
-  
+  $('.media-body a').click ->
+    $('#myPost').attr 'method', 'post'
+    $('#myPost').attr 'action', '/reviews/'+ $(this).data 'id'
+    $('<input>').attr(
+      type: 'hidden'
+      value: 'patch'
+      name: '_method').appendTo '#myPost'
+    a = $(this).siblings('#description').text()
+    $('#review_description').val a
+  return
 
+  $('#comment_btn').on 'click', ->
+    e.preventDefault()
+    if $('#review_rating').val() == ''
+      alert 'cannot submit without rating'
+    else
+      $('#myPost').submit()
+  return
