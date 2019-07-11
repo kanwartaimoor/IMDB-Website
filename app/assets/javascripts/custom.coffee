@@ -20,6 +20,8 @@ $(document).ready ->
     $('.add_actor').toggle 'slide'
   
   url = window.location.href
+  if (~url.indexOf("?"))
+    url = url.substring(0, url.indexOf('?'))
   id = url.substring(url.lastIndexOf('/') + 1)
   token = $('meta[name="csrf-token"]').attr('content')
   $('#actorsubmit').click ->

@@ -35,7 +35,11 @@
           <a href="/" class="nav-item nav-link active" style="color: white;">Home</a>
           <% if user_signed_in? %>
             <a href="/movies" class="nav-item nav-link" style="color: white;">Movies</a>
-            <a href="/actors" class="nav-item nav-link" style="color: white;">Actors</a>        
+            <a href="/actors" class="nav-item nav-link" style="color: white;">Actors</a>
+            <% if current_user.admin? %>
+             <a href="/admin/reported_reviews" class="nav-item nav-link" style="color: white;">Reported Reviews</a>
+             <a href="/admin/users" class="nav-item nav-link" style="color: white;">Users</a>        
+            <% end %>        
           <% end %>
         </div>
         <div class="navbar-nav ml-auto">

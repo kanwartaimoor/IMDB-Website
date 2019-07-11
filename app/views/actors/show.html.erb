@@ -17,5 +17,7 @@
   <%= @actor.date_of_birth %>
 </p>
 
-<%= link_to 'Edit', edit_actor_path(@actor) %> |
-<%= link_to 'Back', actors_path %>
+<% if current_user.admin? %>
+  <%= link_to 'Edit', edit_actor_path(@actor) %> |
+  <%= link_to 'Back', actors_path %>
+<% end %>

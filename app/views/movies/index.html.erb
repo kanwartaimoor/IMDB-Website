@@ -7,5 +7,9 @@
 	<% end %>
 </div>
 
-<%= paginate @movies, page_links: false %>
-<%= link_to 'New Movie', new_movie_path %>
+<div class="container pagination justify-content-center">
+  <%= paginate @movies,  pagination_class: "pagination-sm" %>
+</div>
+<% if current_user.admin? %>
+  <%= link_to 'New Movie', new_movie_path %>
+<% end %>

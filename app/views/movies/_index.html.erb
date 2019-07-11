@@ -2,11 +2,16 @@
   <!-- Card 1: Blade Runner -->
   <div class="movie-card" style="background: url( <%= url_for movie.images.first %>); background-size: contain;">
     <div class="color-overlay">
-      <!-- <div class="movie-share">
-        <%= link_to 'Show', movie %>
-        <%= link_to 'Edit', edit_movie_path(movie) %>
-        <%= button_to 'Destroy', movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div> -->
+      <% if current_user.try(:admin?) %>
+        <div class="movie-share">
+          <%= link_to  edit_movie_path(movie), class: "btn btn-primary mt-2 a-btn-slide-text" do %>
+            <span aria-hidden="true">&#x270f;</span>
+          <% end %>
+          <%= link_to movie_path(movie), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary mt-2 a-btn-slide-text", id: "del_movie" do %>
+            <span aria-hidden="true" class="fa fa-remove"></span>
+          <% end %>
+        </div>
+      <%  end %>
       <div class="movie-content">
         <div class="movie-header">
           <h1 class="movie-title"><%= movie.title %></h1>

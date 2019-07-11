@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
   before_action :set_movie, only: [:show, :edit, :update, :destroy, :delete_image, :addActor]
   before_action :authenticate_user!
+  before_action :authenticate_admin!, only: [:create, :edit, :update, :destroy, :addActor, :delete_image, :new] 
 
   # GET /movies
   # GET /movies.json
@@ -11,6 +12,8 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    @reviews = @movie.reviews.order(:timestamp).page params[:page]
+    @reported_reviews = current_user.reported_reviews.where(movie: @movie).pluck(:review_id)
   end
 
   # GET /movies/new
@@ -84,5 +87,9 @@ class MoviesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def movie_params
       params.require(:movie).permit(:title, :description, :genre, :release_date, :rating, :trailer , :director, :writer, :run_time, images: [])
+    end
+
+    def authenticate_admin!
+      redirect_to root_path unless current_user.admin?
     end
 end

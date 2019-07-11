@@ -5,7 +5,7 @@
     </span>
     <div class="media-body">
       <span class="text-muted pull-right">
-        <small class="text-muted">30 mins ago</small>
+        <small class="text-muted"><%= time_ago_in_words(review.updated_at).humanize %></small>
       </span>
       <strong class="text-success">@ <%= review.user.name %></strong>
       <p id="description"><%= review.description %><p>
@@ -16,10 +16,17 @@
         </p>
       </p>
       <% if current_user == review.user %>
-      <a href="#panel-body-id" data-id="<%= review.id %>">Edit</a>
-      <!--         <%= link_to 'Edit', edit_review_path(review), id: review.id %> -->
-      <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <a href="#panel-body-id" data-id="<%= review.id %>">Edit</a>
+        <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% else %>
+        <% unless @reported_reviews.include?(review.id) %>
+          <%= link_to '', {:controller => "reported_reviews", :action => "create", reported_review: {user_id: current_user.id, movie_id: @movie.id, review_id: review.id, description: review.description } }, id: review.id , method: :post, remote: true, class: "fa fa-flag-o" %> 
+        <% else %>
+          <p class="fa fa-flag"></p>
+         <% end %>
+      <% end %>
+      <% if current_user.admin? && review.user!=current_user %>
+        <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
     </div>
   </li>

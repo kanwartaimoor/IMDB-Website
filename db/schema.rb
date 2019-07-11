@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_115140) do
+ActiveRecord::Schema.define(version: 2019_07_10_055035) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 2019_07_08_115140) do
     t.string "run_time"
   end
 
+  create_table "reported_reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "movie_id", null: false
+    t.integer "review_id", null: false
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["movie_id"], name: "index_reported_reviews_on_movie_id"
+    t.index ["review_id"], name: "index_reported_reviews_on_review_id"
+    t.index ["user_id"], name: "index_reported_reviews_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.text "description"
     t.integer "user_id", null: false
@@ -105,6 +117,9 @@ ActiveRecord::Schema.define(version: 2019_07_08_115140) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "reported_reviews", "movies"
+  add_foreign_key "reported_reviews", "reviews"
+  add_foreign_key "reported_reviews", "users"
   add_foreign_key "reviews", "movies"
   add_foreign_key "reviews", "users"
 end

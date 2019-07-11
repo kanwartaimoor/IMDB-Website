@@ -1,11 +1,12 @@
 class ActorsController < ApplicationController
   before_action :set_actor, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_action :authenticate_admin!, only: [:create, :edit, :update, :destroy, :new, :detach] 
 
   # GET /actors
   # GET /actors.json
   def index
-    @actors = Actor.all
+    @actors = Actor.order(:name).page params[:page]
   end
 
   # GET /actors/1
@@ -84,5 +85,9 @@ class ActorsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def actor_params
       params.require(:actor).permit(:name, :date_of_birth, :avatar)
+    end
+
+    def authenticate_admin!
+      redirect_to root_path unless current_user.admin?
     end
 end
