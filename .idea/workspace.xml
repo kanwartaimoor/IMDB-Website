@@ -2,73 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ee7ab9-68db-4e03-a8d3-2e7db84aa84e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.generators" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.rakeTasks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/mac.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/rubyproject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/images/nouser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/reported_reviews_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/create.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/users/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/users/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/users/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/_no_search.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/pages/_search.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/add_favourite.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/remove_favourite.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20190715115006_create_join_table_movie_user.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/custom.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/actors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/actors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/movies.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/movies.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/pages_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/pages_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/reported_reviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reported_reviews_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/movie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/movie.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/reported_review.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/reported_review.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/_index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/_index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/_review.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/_review.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/_reported_review.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/_reported_review.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/index.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/index.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reported_reviews/show.json.jbuilder" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/show.json.jbuilder" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -117,8 +52,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="225">
+              <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -146,8 +81,8 @@
       <find>sqlli</find>
       <find>sqlite</find>
       <find>sql</find>
-      <find>sq</find>
       <find>sqlite3</find>
+      <find>sq</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,9 +138,9 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reviews/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reviews/index.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/Gemfile.lock" />
         <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
@@ -433,12 +368,12 @@
       <workItem from="1563254617854" duration="19263000" />
       <workItem from="1563339981559" duration="5344000" />
       <workItem from="1563364598964" duration="147000" />
-      <workItem from="1563387821196" duration="3415000" />
+      <workItem from="1563387821196" duration="3743000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51144000" />
+    <option name="totallyTimeSpent" value="51472000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -797,13 +732,6 @@
     <entry file="file://$PROJECT_DIR$/db/seeds.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="254" column="26" selection-start-line="254" selection-start-column="26" selection-end-line="254" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -814,10 +742,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="262" column="34" selection-start-line="262" selection-start-column="34" selection-end-line="262" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="15" column="53" lean-forward="true" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
         </state>
       </provider>
     </entry>
