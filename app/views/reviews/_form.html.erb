@@ -1,27 +1,26 @@
 <%= form_with(model: review, local: true) do |form| %>
-  <% if review.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(review.errors.count, "error") %> prohibited this review from being saved:</h2>
+  <section class="form-dark">
+    <div class="card card-image" >
+      <!--Header-->
+      <div class="text-center">
+        <h3 class="white-text mb-3 mt-3">Edit Review</h3>
+      </div>
+      <!--Body-->
 
-      <ul>
-        <% review.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+      <div class="form-group">
+        <%= form.label :description, class: "text-body mb-3 mt-2 font-weight-bold" %>
+        <%= form.text_area :description %>
+      </div>
+      <div class="md-form">
+        <%= form.label :rating, class: "text-body mb-3 mt-2 font-weight-bold" %>
+        <%= form.text_field :rating %>
+      </div>
+
+      <div class="row d-flex align-items-center mb-4">
+        <div class="text-center mb-3 col-md-12">
+          <%= form.submit "Update", class: "btn btn-success btn-block btn-rounded z-depth-1" %>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :rating %>
-    <%= form.text_field :rating %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  </section>
 <% end %>

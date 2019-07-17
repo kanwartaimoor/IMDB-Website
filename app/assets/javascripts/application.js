@@ -1,5 +1,3 @@
-//= require jquery
 //= require rails-ujs
-//= require bootstrap
-//= my home
+//= require jquery3
 //= require_tree

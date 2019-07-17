@@ -6,6 +6,7 @@ toggleVideo = (state) ->
   if state == 'hide' then jQuery('.youvideo').get(0).stopVideo() 
 
 $(document).ready ->
+
   $('.play-trailer').on 'click', ->
     toggleVideo 'show'
     $('.moviecard').addClass 'movie-view-trailer'
@@ -33,16 +34,15 @@ $(document).ready ->
         window.location.reload()
         return
 
-  $('.media-body a').click ->
+  $('#div-edit > a ').click ->
     $('#myPost').attr 'method', 'post'
     $('#myPost').attr 'action', '/reviews/'+ $(this).data 'id'
     $('<input>').attr(
       type: 'hidden'
       value: 'patch'
       name: '_method').appendTo '#myPost'
-    a = $(this).siblings('#description').text()
+    a = $(this).parent().siblings('#description').text()
     $('#review_description').val a
-  return
 
   $('#comment_btn').on 'click', ->
     e.preventDefault()
@@ -50,4 +50,16 @@ $(document).ready ->
       alert 'cannot submit without rating'
     else
       $('#myPost').submit()
-  return
+
+  $('#search_textbox').keydown ->
+    $('#search_submit').click()
+
+
+  $('#btn_search_show').on 'click', ->
+    if $('#search_div').css('display') == 'none'
+      $('#search_div').show()
+    else
+      $('#search_div').hide()
+
+  $('[data-toggle="popover"]').popover()
+return

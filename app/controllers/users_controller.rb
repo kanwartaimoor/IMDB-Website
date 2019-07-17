@@ -1,23 +1,25 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, :authenticate_admin!
-  
-  def index
-    @users = User.all
+
+  def show
+    @user = User.find(params[:id])
   end
 
-  def destory
-    user = User.find_by id: params[:id]
-    if user.present?
-      user.destroy
-      redirect_to admin_users_path
+  def add_favourite
+    @user = User.find(params[:user_id])
+    @movie = Movie.find(params[:id])
+    @user.favourite_movies << @movie
+    respond_to do |format|
+      format.js {render 'add_favourite'}
     end
   end
 
-  private
-  def users_params
-    params.require(:user).permit(:id)
+  def delete_favourite
+    @user = User.find(params[:user_id])
+    @movie = Movie.find(params[:id])
+    @user.favourite_movies.destroy(@movie)
+    respond_to do |format|
+      format.js {render 'remove_favourite'}
+    end
   end
-  def authenticate_admin!
-    redirect_to root_path unless current_user.admin?
-  end
+
 end

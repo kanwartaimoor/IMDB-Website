@@ -27,6 +27,11 @@
           <span class="movie-rating">R</span>
           <span class="movie-duration"><%= @movie.run_time %></span>
           <span class="movie-genre"> <%= @movie.genre %> </span>
+          <% if !current_user.favourite_movies.include?(@movie) %>
+            <%= link_to "", add_movie_to_user_favourites_movie_path(@movie, user_id: current_user.id), method: :post, class: "fa fa-heart-o", id: "heart_fav", remote: true   %>
+          <% else %>
+            <%= link_to "", remove_movie_from_user_favourites_movie_path(id: @movie.id, user_id: current_user.id), method: :post, class: "fa fa-heart", id: "heart_fav", remote: true   %>
+          <% end %>
         </div>
         <div class="movie-castcrew">
           <span class="title">Director</span>
@@ -57,7 +62,7 @@
             <% if current_user.admin? %>
               <a id="btnadd">
                 <div class="profile-header-img">
-                  <%= image_tag url_for("plus.png"), size: "50x50" , class: "img-circle" %>
+                  <%= image_tag asset_path("plus.png"), size: "50x50" , class: "img-circle" %>
                   <div class="rank-label-container">
                     <span class="label label-default rank-label"> Add Actor </span>
                   </div>

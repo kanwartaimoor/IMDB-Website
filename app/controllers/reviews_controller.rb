@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, only: [:index] 
+  before_action :authenticate_admin!, only: [:index]
   before_action :check_user!, only: [:update, :edit, :show, :destroy]
 
 
@@ -46,6 +46,7 @@ class ReviewsController < ApplicationController
       if review_params[:rating]!=''
         if @review.update(review_params)
           format.js { render :update_review }
+          format.html { redirect_to admin_reported_review_path }
         else
           format.html { render :edit }
           format.json { render json: @review.errors, status: :unprocessable_entity }
@@ -59,11 +60,12 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
-    @review.destroy
-    respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+   if @review.destroy
+      respond_to do |format|
+        format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+   end
   end
 
 
@@ -91,7 +93,7 @@ private
     end
 
     def check_user! 
-      redirect_to root_path unless @review.user == current_user || @review.user.admin?
+      redirect_to root_path unless @review.user == current_user || current_user.admin?
     end
 
     def authenticate_admin!
