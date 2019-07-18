@@ -33,18 +33,26 @@ Rails.application.configure do
   #   location: '/usr/sbin/sendmail',
   #   arguments: '-i'
   # }
+  config.action_mailer.default_url_options = { host: 'https://asli-imdb.herokuapp.com' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.delivery_method = :sendmail
+  # Defaults to:
+  # config.action_mailer.sendmail_settings = {
+  #   location: '/usr/sbin/sendmail',
+  #   arguments: '-i'
+  # }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_options = {from: 'crickethowzat7@gmail.com'}
-
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    user_name:            'crickethowzat7@gmail.com',
-    password:             'howzathowzat',
-    authentication:       'plain',
-    enable_starttls_auto: true }
+      address:              'smtp.gmail.com',
+      port:                 587,
+      user_name:            'crickethowzat7@gmail.com',
+      password:             'howzathowzat',
+      authentication:       'plain',
+      enable_starttls_auto: true }
+
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
