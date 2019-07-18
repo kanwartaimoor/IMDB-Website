@@ -1,7 +1,7 @@
 class Api::MoviesController < ApplicationController
   def index
     if params[:search]
-      if params[:search]!=''
+      if params[:search] != ''
         @movies = search_by_title_and_body(params[:search])
         if @movies.count > 0
           render json: @movies

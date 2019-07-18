@@ -17,8 +17,6 @@ Rails.application.routes.draw do
   root 'pages#index'
 
 
-
-  
   resources :movies do
     member do
       post 'delete_image/:image_id', to: 'movies#delete_image', as: :delete_image_from
@@ -34,8 +32,8 @@ Rails.application.routes.draw do
       post 'users/:user_id/delete_favourite', to: 'users#delete_favourite', as: :remove_movie_from_user_favourites
     end
 
-    resources :actors do 
-     get 'detach'
+    resources :actors do
+      get 'detach'
     end
   end
 
