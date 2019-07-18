@@ -49,4 +49,8 @@ Rails.application.routes.draw do
       get '/admin/reported_reviews', to: 'reported_reviews#index'
     end
   end
+
+  namespace :api do
+    resources :movies
+  end
 end
