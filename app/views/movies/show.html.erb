@@ -126,7 +126,9 @@
             <br>
             <div class="clearfix"></div>
             <hr>
-
+            <% @reviews.each do |review| %>
+               <%= render partial: 'review', locals: { review: review }%>
+            <% end %>
             </div>
             <div class="container pagination justify-content-center">
              <%= paginate @reviews,  pagination_class: "pagination-sm" %>
