@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
-    @reviews = @movie.reviews.order(:timestamp).page params[:page]
+    @reviews = @movie.reviews.page params[:page]
     @reported_reviews = current_user.reported_reviews.where(movie: @movie).pluck(:review_id)
   end
 
