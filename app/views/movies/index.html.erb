@@ -11,5 +11,5 @@
   <%= paginate @movies, pagination_class: "pagination-sm" %>
 </div>
 <% if current_user.admin? %>
-  <%= link_to 'New Movie', new_movie_path %>
+  <%= link_to 'New Movie', new_movie_path, class: "btn btn-primary mt-5 mb-5 col-lg-2 col-md-4 col-sm-6" %>
 <% end %>

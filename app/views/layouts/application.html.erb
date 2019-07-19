@@ -29,7 +29,7 @@
             <% if current_user.admin? %>
               <a href="/admin/reported_reviews" class="nav-item nav-link" style="color: white;">Reported Reviews</a>
               <a href="/admin/users" class="nav-item nav-link" style="color: white;">Users</a>
-              <a href="<%= reviews_path %>" class="nav-item nav-link" style="color: white">Reviews</a>
+              <a href="<%= admin_reviews_path %>" class="nav-item nav-link" style="color: white">Reviews</a>
             <% end %>
           <% end %>
         </div>

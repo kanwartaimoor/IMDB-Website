@@ -1,7 +1,26 @@
-class ReviewsController < ApplicationController
+class Admin::ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, only: [:index]
   before_action :check_user!, only: [:update, :edit, :show, :destroy]
+  # GET /reviews
+  # GET /reviews.json
+  def index
+    @reviews = Review.all
+  end
+
+  # GET /reviews/1
+  # GET /reviews/1.json
+  def show
+  end
+
+  # GET /reviews/new
+  def new
+    @review = Review.new
+  end
+
+  # GET /reviews/1/edit
+  def edit
+  end
 
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
@@ -26,12 +45,11 @@ class ReviewsController < ApplicationController
   def destroy
     if @review.destroy
       respond_to do |format|
-        format.html {redirect_to root_path, notice: 'Review was successfully destroyed.'}
+        format.html {redirect_to admin_reviews_path, notice: 'Review was successfully destroyed.'}
         format.json {head :no_content}
       end
     end
   end
-
 
   def add_review
     @movie = Movie.find(params[:id])
@@ -46,6 +64,7 @@ class ReviewsController < ApplicationController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_review
     @review = Review.find(params[:id])

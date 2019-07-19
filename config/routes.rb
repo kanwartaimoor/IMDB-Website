@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :reported_reviews
+  resources :reported_reviews, only: [:create]
 
-  resources :reviews
+  resources :reviews, except: [:edit, :show, :new, :index, :create]
 
   resources :actors
 
@@ -44,8 +44,10 @@ Rails.application.routes.draw do
       get 'remove_admin', to: 'users#remove_admin'
     end
     resources :reported_reviews do
-      get '/admin/reported_reviews', to: 'reported_reviews#index'
+      get 'reported_reviews', to: 'reported_reviews#index'
     end
+
+    resources :reviews, except: [:create]
   end
 
   namespace :api do
