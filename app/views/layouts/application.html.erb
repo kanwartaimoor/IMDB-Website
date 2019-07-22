@@ -56,6 +56,8 @@
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <% if current_user.avatar.attached? %>
                   <%= image_tag user_avatar(current_user, 35), class: "rounded-circle" %>
+                <% else %>
+                  <%= image_tag 'nouser', size: '35x35', class: "rounded-circle" %>
                 <% end %>
               </a>
               <ul class="dropdown-menu" role="menu">

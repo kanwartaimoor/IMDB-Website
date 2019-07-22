@@ -5,7 +5,11 @@
       <div class="px-4 pt-0 pb-4 bg-dark">
         <div class="media align-items-end profile-header">
           <div class="profile mr-3">
-            <img src="<%= url_for @user.avatar %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+            <% if @user.avatar.attached? %>
+              <img src="<%= url_for @user.avatar %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+            <% else %>
+              <img src="<%= asset_path "nouser" %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+            <% end %>
             <% if @user == current_user %>
               <%= link_to "Edit Profile", edit_user_registration_path(current_user), class: "btn btn-dark btn-sm btn-block" %>
             <% end %>

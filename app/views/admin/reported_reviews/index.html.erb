@@ -13,7 +13,13 @@
                 <ul class="media-list" id="review-<%= reported_review.review_id %>">
                   <li class="media">
                     <span class="pull-left mr-3">
-                      <img src="<%= url_for user_avatar (reported_review.review.user) %>" alt="">
+                      <a href="<%= user_show_path(reported_review.review.user)%>">
+                        <% if reported_review.review.user.avatar.attached? %>
+                          <img src="<%= url_for reported_review.review.user.avatar %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                        <% else %>
+                          <img src="<%= asset_path "nouser" %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                        <% end %>
+                      </a>
                     </span>
                     <div class="media-body">
                       <span class="text-muted pull-right">

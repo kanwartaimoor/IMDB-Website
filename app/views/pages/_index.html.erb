@@ -1,5 +1,9 @@
 <div class="card ">
-  <div class="wrapper" style=" background: url(<%= url_for movie.images.first %>) center/cover no-repeat;">
+  <% if movie.images.attached? %>
+    <div class="wrapper" style=" background: url(<%= url_for movie.images.first %>) center/cover no-repeat;">
+  <% else %>
+    <div class="wrapper" style="background: url(<%= asset_path "no_thumb" %>) center/cover no-repeat; color: black">
+  <% end %>
     <div class="data">
       <div class="content">
         <h1 class="title"><%= movie.title %> (<%= movie.release_date %>)</h1>

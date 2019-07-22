@@ -1,7 +1,11 @@
 <ul class="media-list" id="review-<%= review.id %>">
   <li class="media">
     <span class="pull-left">
-      <img src="<%= url_for review.user.avatar %>" alt="">
+      <% if review.user.avatar.attached? %>
+        <img src="<%= url_for review.user.avatar %>" alt="">
+      <% else %>
+        <img src="<%= asset_path "nouser.png" %>" alt="">
+      <% end %>
     </span>
     <div class="media-body">
       <span class="text-muted pull-right">
