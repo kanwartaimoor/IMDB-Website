@@ -6,7 +6,7 @@
         <% if user.avatar.attached? %>
           <div class="wrapper" style=" background: url(<%= url_for user.avatar %>) center/cover no-repeat;">
         <% else %>
-          <div class="wrapper" style=" background: url(<%= asset_path("nouser.png") %>) center/cover no-repeat; color: black;">
+          <div class="wrapper" style=" background: url(<%= url_for('/assets/nouser-bfa6318418829641d9901eca6fa5d3d38405476a80af98e24170b41cbf06a62e.png') %>) center/cover no-repeat; color: black;">
         <% end %>
         <div class="data">
           <div class="content">

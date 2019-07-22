@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ee7ab9-68db-4e03-a8d3-2e7db84aa84e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/movies/_review.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/_review.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -60,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="59" column="125" selection-start-line="59" selection-start-column="125" selection-end-line="59" selection-end-column="125" />
+            <state relative-caret-position="169">
+              <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -79,8 +82,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rail</find>
-      <find>show</find>
       <find>sign_in</find>
       <find>welcome</find>
       <find>p</find>
@@ -109,6 +110,8 @@
       <find>ENV</find>
       <find>crede</find>
       <find>logo</find>
+      <find>NO</find>
+      <find>nouser</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,7 +152,6 @@
         <option value="$PROJECT_DIR$/app/views/actors/_index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/reviews/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/pages_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
@@ -159,15 +161,16 @@
         <option value="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" />
         <option value="$PROJECT_DIR$/config/initializers/setup_mail.rb" />
-        <option value="$PROJECT_DIR$/app/views/movies/_review.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/pages/_index.html.erb" />
         <option value="$PROJECT_DIR$/config/credentials.yml.enc" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/movies/_review.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" />
       </list>
     </option>
   </component>
@@ -403,12 +406,12 @@
       <workItem from="1563515942088" duration="6075000" />
       <workItem from="1563544326557" duration="579000" />
       <workItem from="1563723843645" duration="478000" />
-      <workItem from="1563773028074" duration="12289000" />
+      <workItem from="1563773028074" duration="12652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86176000" />
+    <option name="totallyTimeSpent" value="86539000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -805,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="59" column="125" selection-start-line="59" selection-start-column="125" selection-end-line="59" selection-end-column="125" />
+        <state relative-caret-position="169">
+          <caret line="54" column="38" lean-forward="true" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
         </state>
       </provider>
     </entry>

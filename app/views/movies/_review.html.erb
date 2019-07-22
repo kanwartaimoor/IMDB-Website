@@ -4,7 +4,7 @@
       <% if review.user.avatar.attached? %>
         <img src="<%= url_for review.user.avatar %>" alt="">
       <% else %>
-        <img src="<%= asset_path "nouser.png" %>" alt="">
+        <img src="<%= url_for('/assets/nouser-bfa6318418829641d9901eca6fa5d3d38405476a80af98e24170b41cbf06a62e.png') %>" alt="">
       <% end %>
     </span>
     <div class="media-body">

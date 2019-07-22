@@ -17,7 +17,7 @@
                         <% if reported_review.review.user.avatar.attached? %>
                           <img src="<%= url_for reported_review.review.user.avatar %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
                         <% else %>
-                          <img src="<%= asset_path "nouser" %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
+                          <img src="<%= url_for ('/assets/nouser-bfa6318418829641d9901eca6fa5d3d38405476a80af98e24170b41cbf06a62e.png') %>" alt="..." width="130" class="rounded mb-2 img-thumbnail">
                         <% end %>
                       </a>
                     </span>
