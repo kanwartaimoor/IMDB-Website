@@ -42,8 +42,8 @@ Rails.application.configure do
       :port                 =>  '587',
       :authentication       =>  :plain,
       :user_name            =>  'apikey',
-      :password             =>  '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',
-      :domain               =>  'https://asli-imdb.herokuapp.com',
+      :user_name            =>  Rails.application.credentials.sendgrid[:username],
+      :password             =>  Rails.application.credentials.sendgrid[:password],
       :enable_starttls_auto  =>  true
   }
 

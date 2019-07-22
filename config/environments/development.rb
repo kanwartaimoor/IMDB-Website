@@ -59,8 +59,8 @@ Rails.application.configure do
       :address              =>  'smtp.sendgrid.net',
       :port                 =>  '587',
       :authentication       =>  :plain,
-      :user_name            =>  'apikey',
-      :password             =>  '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',
+      :user_name            =>  Rails.application.credentials.sendgrid[:username],
+      :password             =>  Rails.application.credentials.sendgrid[:password],
       :domain               =>  'localhost:3000',
       :enable_starttls_auto  =>  true
   }
