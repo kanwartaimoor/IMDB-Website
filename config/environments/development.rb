@@ -31,27 +31,39 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
-  config.action_mailer.default_url_options = {host: 'http://localhost:3000'}
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :sendmail
-  # Defaults to:
-  # config.action_mailer.sendmail_settings = {
-  #   location: '/usr/sbin/sendmail',
-  #   arguments: '-i'
-  # }
+  # config.action_mailer.default_url_options = {host: 'http://localhost:3000'}
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.delivery_method = :sendmail
+  # # Defaults to:
+  # # config.action_mailer.sendmail_settings = {
+  # #   location: '/usr/sbin/sendmail',
+  # #   arguments: '-i'
+  # # }
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_options = {from: 'crickethowzat7@gmail.com'}
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #     address: 'smtp.gmail.com',
+  #     port: 587,
+  #     user_name: 'crickethowzat7@gmail.com',
+  #     password: 'howzathowzat',
+  #     authentication: 'plain',
+  #     enable_starttls_auto: true}
+
+  config.action_mailer.default_url_options = {host: 'localhost:3000'}
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'crickethowzat7@gmail.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address: 'smtp.gmail.com',
-      port: 587,
-      user_name: 'crickethowzat7@gmail.com',
-      password: 'howzathowzat',
-      authentication: 'plain',
-      enable_starttls_auto: true}
-
-
+      :address              =>  'smtp.sendgrid.net',
+      :port                 =>  '587',
+      :authentication       =>  :plain,
+      :user_name            =>  'apikey',
+      :password             =>  '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',
+      :domain               =>  'localhost:3000',
+      :enable_starttls_auto  =>  true
+  }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

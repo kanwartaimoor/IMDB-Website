@@ -35,13 +35,6 @@ Rails.application.configure do
   # }
   config.action_mailer.default_url_options = {host: 'https://asli-imdb.herokuapp.com'}
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :sendmail
-  # Defaults to:
-  # config.action_mailer.sendmail_settings = {
-  #   location: '/usr/sbin/sendmail',
-  #   arguments: '-i'
-  # }
-  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -50,7 +43,7 @@ Rails.application.configure do
       :authentication       =>  :plain,
       :user_name            =>  'apikey',
       :password             =>  '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',
-      :domain               =>  'heroku.com',
+      :domain               =>  'https://asli-imdb.herokuapp.com',
       :enable_starttls_auto  =>  true
   }
 
