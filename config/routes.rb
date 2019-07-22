@@ -39,7 +39,7 @@ Rails.application.routes.draw do
 
 
   namespace :admin do
-    resources :users do
+    resources :users, except: [:show] do
       get 'make_admin', to: 'users#make_admin'
       get 'remove_admin', to: 'users#remove_admin'
     end

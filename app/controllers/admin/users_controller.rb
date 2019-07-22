@@ -5,7 +5,7 @@ class Admin::UsersController < ApplicationController
     @users = User.all
   end
 
-  def destory
+  def destroy
     user = User.find_by id: params[:id]
     if user.present?
       user.destroy

@@ -18,13 +18,13 @@
                     <div class="media-body">
                       <span class="text-muted pull-right">
                       </span>
-                      <strong class="text-success">@ <%= reported_review.user.name %> Reported this review on
+                      <strong class="text-success">@ <a href="<%= user_show_path(reported_review.user) %>"> <%= reported_review.user.name %> </a> Reported this review on
                         <strong class="text-danger">"<%= reported_review.movie.title %>"</strong>
                       </strong>
                       <p id="description"><%= reported_review.description %>
                       </p>
                       <%= link_to 'Destroy', admin_reported_review_path(reported_review.id), method: :delete, data: {confirm: 'Are you sure?'} %>
-                      <%= link_to 'Edit', edit_review_path(reported_review.review) %></td>
+                      <%= link_to 'Edit', edit_admin_review_path(reported_review.review) %></td>
                     </div>
                   </li>
                 </ul>
