@@ -43,15 +43,16 @@ Rails.application.configure do
   # }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = {from: 'crickethowzat7@gmail.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-      address: 'smtp.gmail.com',
-      port: 465,
-      user_name: 'crickethowzat7@gmail.com',
-      password: 'howzathowzat',
-      authentication: 'plain',
-      enable_starttls_auto: true}
+      :address              =>  'smtp.sendgrid.net',
+      :port                 =>  '587',
+      :authentication       =>  :plain,
+      :user_name            =>  'apikey',
+      :password             =>  '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',
+      :domain               =>  'heroku.com',
+      :enable_starttls_auto  =>  true
+  }
 
 
 
