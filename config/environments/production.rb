@@ -41,7 +41,6 @@ Rails.application.configure do
       :address              =>  'smtp.sendgrid.net',
       :port                 =>  '587',
       :authentication       =>  :plain,
-      :user_name            =>  'apikey',
       :user_name            =>  Rails.application.credentials.sendgrid[:username],
       :password             =>  Rails.application.credentials.sendgrid[:password],
       :enable_starttls_auto  =>  true
