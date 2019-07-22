@@ -57,7 +57,7 @@
                 <% if current_user.avatar.attached? %>
                   <%= image_tag user_avatar(current_user, 35), class: "rounded-circle" %>
                 <% else %>
-                  <%= image_tag url_for('/assets/nouser-bfa6318418829641d9901eca6fa5d3d38405476a80af98e24170b41cbf06a62e.png\'), size: '35x35', class: "rounded-circle" %>
+                  <%= image_tag url_for('/assets/nouser-bfa6318418829641d9901eca6fa5d3d38405476a80af98e24170b41cbf06a62e.png'), size: '35x35', class: "rounded-circle" %>
                 <% end %>
               </a>
               <ul class="dropdown-menu" role="menu">
