@@ -46,19 +46,17 @@
         </div>
         <div class="row" id="movie-actors-div">
           <% @movie.actors.each do |actor| %>
-            <a class="nohover col-sm-3" href="<%= actor_path(actor)%>" style="color: black">
-            <div class="profile-header-container" id="actor-<%= actor.id %>">
+            <div class="profile-header-container col-3" id="actor-<%= actor.id %>">
               <div class="profile-header-img">
                 <%= image_tag user_avatar(actor, 50), class: "rounded-circle" %>
                 <div class="rank-label-container">
                   <span class="label label-default rank-label"> <%= actor.name %> </span>
                   <% if current_user.admin? %>
                     <p> <%= link_to("Remove", movie_actor_detach_path(@movie, actor_id: actor.id), remote: true, :data => {:confirm => "Are you sure you want to remove this actor?"}, class: "nohover" ) %>  </p>
-                  <% end %>
+                  <%end %>
                 </div>
               </div>
             </div>
-            </a>
           <% end %>
           <div class="profile-header-container col-sm-3">
             <% if current_user.admin? %>
