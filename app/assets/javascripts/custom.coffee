@@ -1,10 +1,4 @@
 #To be fixed in later commits
-toggleVideo = (state) ->
-  div = document.getElementById('youvideo')
-  iframe = div.getElementsByTagName('iframe')[0].contentWindow
-  div.style.display = if state == 'hide' then 'none' else ''
-  if state == 'hide' then jQuery('.youvideo').get(0).stopVideo()
-
 $(document).ready ->
   $('.play-trailer').on 'click', ->
     toggleVideo 'show'
@@ -19,39 +13,7 @@ $(document).ready ->
   $('#btnadd').click ->
     $('.add_actor').toggle 'slide'
 
-  url = window.location.href
-  if (~url.indexOf("?"))
-    url = url.substring(0, url.indexOf('?'))
-  id = url.substring(url.lastIndexOf('/') + 1)
-  token = $('meta[name="csrf-token"]').attr('content')
-  $('#actorsubmit').click ->
-    $.ajax
-      type: 'POST'
-      url: id + '/' + $('#actors_actor_id').val() + '/addActor'
-      headers:
-        'X-CSRF-Token': document.querySelector('meta[name=csrf-token]').content
-      success: (result) ->
-        window.location.reload()
-        return
-
-  $('#div-edit > a ').click ->
-    $('#myPost').attr 'method', 'post'
-    $('#myPost').attr 'action', '/reviews/' + $(this).data 'id'
-    $('<input>').attr(
-      type: 'hidden'
-      value: 'patch'
-      name: '_method').appendTo '#myPost'
-    a = $(this).parent().siblings('#description').text()
-    $('#review_description').val a
-
-  $('#comment_btn').on 'click', ->
-    e.preventDefault()
-    if $('#review_rating').val() == ''
-      alert 'cannot submit without rating'
-    else
-      $('#myPost').submit()
-
-  $('#search_textbox').keydown ->
+  $('#search_textbox').keyup ->
     $('#search_submit').click()
 
   $('#btn_search_show').on 'click', ->
@@ -60,5 +22,23 @@ $(document).ready ->
     else
       $('#search_div').hide()
 
-  $('[data-toggle="popover"]').popover()
+  total = $('form').find 'input'
+  i = 0
+  html = "<i class='fa fa-asterisk' style='font-size: 7px ;color: lightcoral'></i>"
+  while i < total.length
+    if total[i].hasAttribute('required')
+      sib = total[i].previousElementSibling
+      $(sib).append ' '+html
+    i++;
+
+  toggleVideo = (state) ->
+    div = document.getElementById('youvideo')
+    iframe = div.getElementsByTagName('iframe')[0].contentWindow
+    div.style.display = if state == 'hide' then 'none' else ''
+    if state == 'hide'
+      src = $('#youvideo > iframe').attr 'src'
+      $('#youvideo > iframe').attr('src','')
+      $('#youvideo > iframe').attr('src',src)
+
+  $('#new_movies').animate { scrollLeft: '+=200' }, 500
 return

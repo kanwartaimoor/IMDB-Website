@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 <section>
   <div style="background-color: white">
     <!--Header-->
@@ -24,7 +23,7 @@
       <% @reviews.each do |review| %>
         <tr>
           <td><%= review.description %></td>
-          <td><%= review.user_id %></td>
+          <td><%=  review.user_id %></td>
           <td><%= review.movie_id %></td>
           <td><%= review.status %></td>
           <td><%= review.rating %></td>

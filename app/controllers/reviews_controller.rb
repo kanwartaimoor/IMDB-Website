@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
   # PATCH/PUT /reviews/1.json
   def update
     respond_to do |format|
-      if review_params[:rating] != ''
+      if params[:description]!='' && params[:rating]!=''
         if @review.update(review_params)
           format.js {render :update_review}
           format.html {redirect_to admin_review_path}
@@ -24,9 +24,10 @@ class ReviewsController < ApplicationController
   # DELETE /reviews/1
   # DELETE /reviews/1.json
   def destroy
+    @movie = @review.movie
     if @review.destroy
       respond_to do |format|
-        format.html {redirect_to root_path, notice: 'Review was successfully destroyed.'}
+        format.html {redirect_to @movie, notice: 'Review was successfully destroyed.'}
         format.json {head :no_content}
       end
     end
@@ -34,12 +35,14 @@ class ReviewsController < ApplicationController
 
 
   def add_review
-    @movie = Movie.find(params[:id])
-    if review_params[:rating] != ''
-      @review = @movie.reviews.create(review_params.merge(user: current_user, status: 'approved'))
-      if Review.find(@review.id)
-        respond_to do |format|
-          format.js {render :add_review}
+    if Movie.find params[:id]
+      @movie = Movie.find(params[:id])
+      if params[:description]!='' && params[:rating]!=''
+        @review = @movie.reviews.create(review_params.merge(user: current_user, status: 'approved'))
+        if Review.find(@review.id)
+          respond_to do |format|
+            format.js {render :add_review}
+          end
         end
       end
     end

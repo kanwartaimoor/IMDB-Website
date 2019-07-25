@@ -1,7 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <!--Section: Live preview-->
   <section class="form-dark">
-
     <!--Form without header-->
     <div class="card card-image">
       <!--Header-->
@@ -12,16 +11,11 @@
       <!--Body-->
       <div class="md-form">
         <label class="text-body mb-3 mt-2 font-weight-bold" for="Form-email5">Your email</label>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control white-text", id: "Form-email15" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control white-text", id: "Form-email15", required: "" %>
       </div>
       <div class="md-form pb-3">
         <label class="text-body mb-3 mt-2 font-weight-bold" for="Form-pass5">Your password</label>
-        <%= f.password_field :password, autocomplete: "current-password", class: "form-control white-text", id: "Form-pass5" %>
-        <div class="form-check my-4">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck17">
-          <label class="text-body mb-3 mt-2 font-weight-bold" for="defaultCheck17">Accept
-            the<a href="#" class="green-text font-weight-bold"> Terms and Conditions</a></label>
-        </div>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control white-text", id: "Form-pass5", required: "" %>
       </div>
       <!--Grid row-->
       <div class="row d-flex align-items-center mb-4">

@@ -1,0 +1,3 @@
+$('#actor-<%= @actor.id %>').remove()
+
+$('.add_actor > form > select').append("<option value='<%= @actor.id %>' > <%= @actor.name %> </option>");

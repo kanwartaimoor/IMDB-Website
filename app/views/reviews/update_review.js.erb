@@ -1,1 +1,2 @@
 $("#review-<%= @review.id %>").replaceWith("<%= j (render partial: 'movies/review', locals: { review: @review } ) %>")
+$('#comment_box').hide()

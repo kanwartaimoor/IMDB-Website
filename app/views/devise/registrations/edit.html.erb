@@ -34,7 +34,7 @@
         <label for="Form-pass5c" class="text-body mb-3 mt-2 font-weight-bold">Confirm Password</label>
         <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control white-text', id: "Form-pass5c" %>
         <label for="Form-pass5current" class="text-body mb-3 mt-2 font-weight-bold">Current Password</label>
-        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control white-text', id: "Form-pass5current", placeholder: "we need your current password to confirm your changes" %>
+        <%= f.password_field :current_password, autocomplete: "off", class: 'form-control white-text', id: "Form-pass5current", placeholder: "we need your current password to confirm your changes", required: "" %>
       </div>
       <div class="row d-flex align-items-center mb-4">
         <div class="text-center mb-3 col-md-12">
@@ -47,7 +47,6 @@
 
 
 <section class="form-dark">
-  <%= devise_error_messages! %>
   <div class="card card-image">
     <div class="text-center">
       <h3>Cancel my account</h3>

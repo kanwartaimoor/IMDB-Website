@@ -1,0 +1,14 @@
+$('#movie-actors-div').prepend('<div class="profile-header-container col-sm-3" id="actor-<%= @actor.id %>">' +
+    '              <div class="profile-header-img">' +
+    '                <%= image_tag user_avatar(@actor, 50), class: "rounded-circle" %>' +
+    '                <div class="rank-label-container">' +
+    '                  <span class="label label-default rank-label"> <%= @actor.name %> </span>' +
+    '                  <% if current_user.admin? %>' +
+    '                    <p> <%= link_to("Remove", movie_actor_detach_path(@movie, actor_id: @actor.id), remote: true, :data => {:confirm => "Are you sure?"}) %>  </p>' +
+    '                  <% end %>' +
+    '                </div>' +
+    '              </div>' +
+    '            </div>')
+$('.add_actor > form > select option[value="<%= @actor.id %>"]').each(function () {
+    $(this).remove();
+})

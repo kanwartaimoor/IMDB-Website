@@ -67,10 +67,12 @@ class ActorsController < ApplicationController
     @movie = Movie.find(params[:movie_id])
     @actor = Actor.find(params[:actor_id])
     if @movie.actors.delete(@actor)
-      redirect_to movie_path(@movie)
+      respond_to do |format|
+        format.js { render 'remove_actor' }
+      end
     else
       respond_to do |format|
-        format.html {redirect_to actors_url, notice: 'Cannot remove actor from movie'}
+        format.html {redirect_to movie_path, notice: 'Cannot remove actor from movie'}
         format.json {head :no_content}
       end
     end

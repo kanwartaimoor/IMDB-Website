@@ -67,7 +67,15 @@ class MoviesController < ApplicationController
   end
 
   def addActor
-    @movie.actors << Actor.find(params[:actor_id])
+    x = actor_params
+    puts x[:actor_id]
+    @actor = Actor.find(x[:actor_id])
+    if !@movie.actors.where(id: @actor.id).any?
+      @movie.actors << Actor.find(x[:actor_id])
+      respond_to do |format|
+        format.js { render 'movies/add_actor' }
+      end
+    end
   end
 
   def delete_image
@@ -89,6 +97,10 @@ class MoviesController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def movie_params
     params.require(:movie).permit(:title, :description, :genre, :release_date, :rating, :trailer, :director, :writer, :run_time, images: [])
+  end
+
+  def actor_params
+    params.require(:actors).permit(:actor_id)
   end
 
   def authenticate_admin!

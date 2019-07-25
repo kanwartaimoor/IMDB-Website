@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :movies
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
 
   get 'users/:id', to: 'users#show', as: 'user_show'
 
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :movies do
     member do
       post 'delete_image/:image_id', to: 'movies#delete_image', as: :delete_image_from
-      post ':actor_id/addActor', to: 'movies#addActor'
+      post 'addActor', to: 'movies#addActor', as: :add_actor_to
     end
 
     member do

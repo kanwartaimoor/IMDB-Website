@@ -6,8 +6,10 @@
   transition: .4s;
 }
 
-a {
+.nohover:hover
+{
   text-decoration: none;
+  background-color: transparent;
 }
 
 #movie-card-list .movie-card {
@@ -164,4 +166,3 @@ a {
 .button:hover #heart_fav {
   background-color: red;
 }
-
