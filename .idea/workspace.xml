@@ -2,83 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01ee7ab9-68db-4e03-a8d3-2e7db84aa84e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/registrations_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mailers/my_mailer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/actors/remove_actor.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/movies/add_actor.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/reviews/_review_box.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/custom.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/custom.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/devise.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/devise.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/movies.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/movies.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/pages.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/actors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/actors_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/movies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/movies_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/reviews_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mailers/application_mailer.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailers/application_mailer.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/movie.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/movie.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/actors/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/actors/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/reported_reviews/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reported_reviews/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reviews/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/reviews/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/reviews/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/users/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/_review.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/_review.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/movies/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/movies/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/add_review.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/add_review.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/reviews/update_review.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/reviews/update_review.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/add_favourite.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/add_favourite.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/remove_favourite.js.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/remove_favourite.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/cx/qq/cxqq1j2xck9ptomiqv8fvnlw2p2z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/ew/u8/ewu8c5kxnywjgw9cw14o4k7isnhl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/fz/lo/fzlo579r3r074fmi88pywdsgrj1t" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/cxqq1j2xck9ptomiqv8fvnlw2p2z/2a270184cfd6861d41b88bc148922edbb0a098952db6a24f4366b2796da94ed8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/cxqq1j2xck9ptomiqv8fvnlw2p2z/f00eb2eb31e38c222a1b9ea5ae996942691538e6494f4016e2d72e0f97bb8c82" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/ewu8c5kxnywjgw9cw14o4k7isnhl/62840dee3c057a4ae685792d92a02719c420d26d47e2f8a7b191746cab8c1f25" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/ewu8c5kxnywjgw9cw14o4k7isnhl/679b5e750230182ea94311bd5ccb3fb4c4ca00b2dbe0911d4a98748c4b906398" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/ewu8c5kxnywjgw9cw14o4k7isnhl/c2a204df2be4da989a27d5f69f3231c42359f0cc743244f95a4145bd664978ab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/fzlo579r3r074fmi88pywdsgrj1t/2a270184cfd6861d41b88bc148922edbb0a098952db6a24f4366b2796da94ed8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/va/ri/variants/fzlo579r3r074fmi88pywdsgrj1t/f00eb2eb31e38c222a1b9ea5ae996942691538e6494f4016e2d72e0f97bb8c82" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/39/391_3ZQlhYgzM7Q72okK4_qrMkU1W90YHO8IZCuBld4.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/39/391_3ZQlhYgzM7Q72okK4_qrMkU1W90YHO8IZCuBld4.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HK/HKJhlEuQqDYXs_fuWtzU08HCKmLqcp_iYzAob-lwNYk.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/HK/HKJhlEuQqDYXs_fuWtzU08HCKmLqcp_iYzAob-lwNYk.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/IH/IHXbrhJMcAvJjj7bTcWYZdlu3HV4yO2seRVhHRf_66Q.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/IH/IHXbrhJMcAvJjj7bTcWYZdlu3HV4yO2seRVhHRf_66Q.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/KN/KNMQjrTw2kbEYQ3AjweW7Qj-rmeEwVF1i73IhQ_tsE4.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/KN/KNMQjrTw2kbEYQ3AjweW7Qj-rmeEwVF1i73IhQ_tsE4.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K_/K_IUrTidg5Qc5GFbxflw3-FBZ9mKeyyIbzb0hrilTxo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/K_/K_IUrTidg5Qc5GFbxflw3-FBZ9mKeyyIbzb0hrilTxo.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fG/fGKyKwZLWPYtbLhaSil320KGsD9rAHVrhYj-UBFsTQs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fG/fGKyKwZLWPYtbLhaSil320KGsD9rAHVrhYj-UBFsTQs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hg/hg_UzfhH1F00FZAg6k0DUYgwBnBYWedjGQ98cxqvrMw.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/hg/hg_UzfhH1F00FZAg6k0DUYgwBnBYWedjGQ98cxqvrMw.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/07/e01bdf44974cc1" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/07/e01bdf44974cc1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/1e/a5a7f7134e7894" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/1e/a5a7f7134e7894" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/35/a52dee9616971b" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/35/a52dee9616971b" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/51/31aa5fc3a75c39" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/51/31aa5fc3a75c39" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/71/79361870c34e07" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/71/79361870c34e07" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/72/4d8bf8ede264db" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/72/4d8bf8ede264db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/9c/fc035fafc720d4" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/9c/fc035fafc720d4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b0/6b91c7d02756a3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b0/6b91c7d02756a3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b0/6ee4bc31e11df3" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/b0/6ee4bc31e11df3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -115,14 +39,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="315">
               <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="75" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -240,7 +173,6 @@
         <option value="$PROJECT_DIR$/app/views/reviews/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/reviews/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/reviews/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/movie.rb" />
         <option value="$PROJECT_DIR$/app/views/movies/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/movies/_review.html.erb" />
@@ -249,6 +181,7 @@
         <option value="$PROJECT_DIR$/app/views/pages/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/custom.coffee" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -291,21 +224,13 @@
               <item name="rubyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubyproject" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rubyproject" type="b2602c69:ProjectViewProjectNode" />
               <item name="rubyproject" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rubyproject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rubyproject" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -500,12 +425,12 @@
       <workItem from="1563773028074" duration="14407000" />
       <workItem from="1563864946627" duration="14143000" />
       <workItem from="1563947021600" duration="15057000" />
-      <workItem from="1564045450467" duration="4273000" />
+      <workItem from="1564045450467" duration="4363000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121767000" />
+    <option name="totallyTimeSpent" value="121857000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,14 +450,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49713877" visible="true" weight="0.2879518" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49713877" weight="0.2879518" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" weight="0.38795182" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49642345" visible="true" weight="0.38795182" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5035765" side_tool="true" weight="0.37831324" />
       <window_info anchor="bottom" id="Database Changes" order="11" sideWeight="0.49928468" weight="0.32891566" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -808,13 +733,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/actor.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -884,11 +802,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/custom.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="315">
           <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="75" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="75" />
         </state>
       </provider>
     </entry>
